@@ -1,45 +1,98 @@
-<div class="container-fluid  ">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="template.component.css">
+  <title>UCEVA</title>
 
+</head>
+<body>
 
-  <div class="row adrianv ">
-
-    <div class="p-5 col-lg-3 col-md-3  col-sm-3	col-2 d-none d-sm-block"> <!--primera columna de configuraciones -->
-
-      <div class="row ">   <!-- fila 1 para configuraciones -->
-       <div class="d-flex flex-column align-items-center justify-content-center vh-35">
-        <div class= "nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-          <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-          <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-          <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
-        </div>
-       </div>
-      </div>
-
-      <div class="row border-top d-flex justify-content-center vh-54 "  >  <!--segunda fila para configuraciones -->
-        hola mundo
-      </div>
-
-    </div>
-    <div class="d-block d-sm-none ">
-      Holi.
-    </div>
-
-
-  <div class="col-lg-9  col-md-9  col-sm-9 col-12	 bg-light">
-    noticias
+<div class="header">
+  <div class="logo">UCEVA</div>
+  <div class="menu">
+    <button>Cursos</button>
+    <button>Noticias</button>
   </div>
-
-  </div> <!-- cierre de fila-->
-
+  <div class="user-info">
+    <div class="avatar">AH</div>
+    <span>Álvaro H. Salazar</span>
+  </div>
 </div>
 
+<div class="main-content">
+  <aside class="sidebar">
+    <button class="sidebar-btn">Inicio</button>
+    <button class="sidebar-btn">Favoritos</button>
+    <div class="dropdown">
+      <button class="sidebar-btn dropdown-btn">Filtros</button>
+      <div class="dropdown-content">
+        <button>Más reciente</button>
+        <button>Más popular</button>
+        <button>Más antiguo</button>
+      </div>
+    </div>
+    <h3>Categorías</h3>
+    <button class="category-btn selected">Todos</button>
+    <button class="category-btn">Ingenierías</button>
+    <button class="category-btn">Salud</button>
+    <button class="category-btn">Derecho</button>
+    <button class="category-btn">Administración</button>
+    <button class="category-btn">Deporte</button>
+    <button class="category-btn">Inglés</button>
+  </aside>
 
+  <div class="content">
 
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-item">Cargando...</div>
+        <div class="carousel-item">La Facultad de Medicina organiza una jornada de salud gratuita.</div>
+        <div class="carousel-item">Se inaugura el nuevo laboratorio de robótica en Ingenierías.</div>
+        <div class="carousel-item">Programa de mentorías empresariales inicia este mes.</div>
+      </div>
 
+      <button class="carousel-control-prev" onclick="moveCarousel(-1)">&#9664;</button>
+      <button class="carousel-control-next" onclick="moveCarousel(1)">&#9654;</button>
+    </div>
 
-<!--
+    <div class="news-section">
+      <div class="news-container">
+        <h4>Ingenierías ⚙️</h4>
+        <p>Creció participación democrática para elegir representante de estudiantes ante el Consejo Directivo. Con una participación del 45.48% de los estudiantes aptos para votar, se realizó, el pasado 4 de octubre, la elección del representante de los estudiantes ante el Consejo Directivo. Se destaca la participación de los estudiantes tanto en votantes, que creció en un 7% comparada con el proceso anterior para elegir el representante del mismo estamento ante Consejo Académico, como candidatos, pues se inscribieron 11 estudiantes para finalmente llegar 8 al día electoral.</p>
+      </div>
+      <div class="news-container">
+        <h4>Salud 🏥</h4>
+        <p>Estudiante de medicina hace movilidad saliente a Corea. Emelyn Sofia Becerra Rodríguez es estudiante de IX semestre del programa de Medicina de la Facultad de Ciencias de la Salud. ¡Hizo historia al representar a la UCEVA en un evento internacional en Corea! Es la primera estudiante de la facultad en realizar movilidad internacional y presencial en este país.</p>
+      </div>
+      <div class="news-container">
+        <h4>Salud Pública 🚑</h4>
+        <p>Medición de ruido estudiantes de ingeniería ambiental. En el marco del Día de la Movilidad Sostenible, los estudiantes de IX semestre del programa de Ingeniería Ambiental llevaron a cabo una medición del ruido ambiental en el campus universitario. Los resultados de estas mediciones se convertirán en el mapa de ruido institucional.</p>
+      </div>
+      <div class="news-container">
+        <h4>Administración de Empresas 📈</h4>
+        <p>Seminario sobre liderazgo y toma de decisiones el próximo mes.</p>
+      </div>
+      <div class="news-container">
+        <h4>Derecho ⚖️</h4>
+        <p>El Departamento de Derecho organiza un ciclo de conferencias sobre derechos humanos. La Facultad de Derecho invita a toda la comunidad universitaria a participar en el ciclo de conferencias 'Retos actuales de los derechos humanos'.</p>
+      </div>
+      <div class="news-container">
+        <h4>Administración 📊</h4>
+        <p>Convocatoria abierta para el programa de mentorías empresariales. El programa de Administración invita a sus estudiantes a participar en el programa de mentorías.</p>
+      </div>
+      <div class="news-container">
+        <h4>Deporte 🏅</h4>
+        <p>Campeonato interuniversitario de fútbol sala se celebrará el próximo mes. Los estudiantes de la Facultad de Deportes están organizando un torneo de fútbol sala.</p>
+      </div>
+      <div class="news-container">
+        <h4>Inglés 🇬🇧</h4>
+        <p>El Departamento de Lenguas Extranjeras lanza el programa "Conversa en inglés". Este nuevo programa busca mejorar las habilidades de conversación de los estudiantes mediante sesiones prácticas.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-
--->
-
+</body>
+</html>
