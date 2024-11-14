@@ -58,14 +58,16 @@ body {
 }
 
 .main-content {
-
   display: flex;
   width: 100%;
   max-width: 1200px;
 }
 
 .sidebar {
-  width: 20%;
+  position: sticky;
+  height: 45%;
+  top: 0;
+  width: 100%;
   background-color: white;
   padding: 15px;
   border-right: 1px solid #ccc;
@@ -195,6 +197,10 @@ body {
 
 .news-container p {
   color: #555;
+}
+
+.opciones{
+ width: 20%;
 }
 
 
