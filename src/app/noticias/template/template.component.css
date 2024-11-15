@@ -178,6 +178,10 @@ width: 30%;
   width: 100%;
 }
 
+.size-btn{
+  width: 30px;
+  height: 30px;
+}
 
 .carousel-track {
   display: flex;
