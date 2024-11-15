@@ -183,6 +183,10 @@ width: 30%;
   height: 30px;
 }
 
+.mlado-2{
+  margin-right: 10px;
+}
+
 .carousel-track {
   display: flex;
   transition: transform 1s ease-in-out;
