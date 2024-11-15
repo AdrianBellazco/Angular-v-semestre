@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TemplateRoutingModule } from './template-routing.module'; //se importa el archivo routing
+import { NoticiasRoutingModule } from './noticias-routing.module'; //se importa el archivo routing
 import {TemplateComponent} from './template/template.component'; //importa el componente
 import {provideHttpClient} from '@angular/common/http'; // extra para la ruta
 
@@ -12,8 +12,8 @@ import {provideHttpClient} from '@angular/common/http'; // extra para la ruta
   ],
   imports: [
     CommonModule,
-    TemplateRoutingModule //se agrega el archivo routing
+    NoticiasRoutingModule //se agrega el archivo routing
   ],
   providers: [provideHttpClient() ]
 })
-export class TemplateModule { }
+export class NoticiasModule { }
