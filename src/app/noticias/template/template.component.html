@@ -17,18 +17,37 @@
   <div class="opciones">
 
   <aside class="sidebar">
-    <button class="sidebar-btn">Inicio</button>
-    <button class="sidebar-btn">Favoritos</button>
-    <div class="dropdown">
-      <button class="sidebar-btn dropdown-btn">Filtros</button>
-      <div class="dropdown-content">
-        <button>Más reciente</button>
-        <button>Más popular</button>
-        <button>Más antiguo</button>
+
+    <div class="row ">   <!-- fila 1 para configuraciones -->
+      <div class=" d-flex flex-column  justify-content-center vh-35">
+        <div class= "cont nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="sidebar-btn nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Inicio</button>
+          <button class="sidebar-btn nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Gurdados</button>
+
+          <div class="dropdown">
+            <button class="nav-link sidebar-btn dropdown-btn">Filtros</button>
+            <div class="dropdown-content">
+              <button>Más reciente</button>
+              <button>Más popular</button>
+              <button>Más antiguo</button>
+            </div>
+          </div>
+
+          <button class="sidebar-btn nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Crear noticia</button>
+          <button class="sidebar-btn nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Historial</button>
+        </div>
       </div>
     </div>
-    <h3>Categorías</h3>
 
+<!--
+    <button class="sidebar-btn" >Inicio</button>
+    <button class="sidebar-btn">Favoritos</button>
+    -->
+
+
+
+
+    <!--
     <button class="category-btn selected">Todos</button>
     <button class="category-btn">Ingenierías</button>
     <button class="category-btn">Salud</button>
@@ -36,57 +55,72 @@
     <button class="category-btn">Administración</button>
     <button class="category-btn">Deporte</button>
     <button class="category-btn">Inglés</button>
+-->
+    <div class=" d-flex flex-column  justify-content-center vh-35">
+
+
+      <div class= "cont nav flex-column nav-pills me-3" role="tablist" aria-orientation="vertical">
+        <h3>Categorías</h3>
+        <button class="sidebar-btn nav-link active"  data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Todo</button>
+        <button class="sidebar-btn nav-link" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Ingenieria</button>
+        <button class="sidebar-btn nav-link"  data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Salud</button>
+        <button class="sidebar-btn nav-link"  data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Derecho</button>
+        <button class="sidebar-btn nav-link"  data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Administrativos</button>
+        <button class="sidebar-btn nav-link"  data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Ingles</button>
+      </div>
+    </div>
+
 
   </aside>
 
+
+
   </div>
+
   <div class="content">
-
-    <div class="carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-item">Cargando...</div>
-        <div class="carousel-item">La Facultad de Medicina organiza una jornada de salud gratuita.</div>
-        <div class="carousel-item">Se inaugura el nuevo laboratorio de robótica en Ingenierías.</div>
-        <div class="carousel-item">Programa de mentorías empresariales inicia este mes.</div>
+    <div class="mb-5 news-container">
+<div class="carousel-size">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.uceva.edu.co/wp-content/uploads/2022/12/diplomado.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.uceva.edu.co/wp-content/uploads/2022/12/investiga.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.uceva.edu.co/wp-content/uploads/2022/12/proyecto-1.jpg" class="d-block w-100" alt="...">
+        </div>
       </div>
-
-      <button class="carousel-control-prev" onclick="moveCarousel(-1)">&#9664;</button>
-      <button class="carousel-control-next" onclick="moveCarousel(1)">&#9654;</button>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+</div>
 
+
+    </div>
     <div class="news-section">
-      <div class="news-container">
-        <h4>Ingenierías ⚙️</h4>
-        <p>Creció participación democrática para elegir representante de estudiantes ante el Consejo Directivo. Con una participación del 45.48% de los estudiantes aptos para votar, se realizó, el pasado 4 de octubre, la elección del representante de los estudiantes ante el Consejo Directivo. Se destaca la participación de los estudiantes tanto en votantes, que creció en un 7% comparada con el proceso anterior para elegir el representante del mismo estamento ante Consejo Académico, como candidatos, pues se inscribieron 11 estudiantes para finalmente llegar 8 al día electoral.</p>
+      <div class="news-container container-size">
+        <h4>Titulo de la noticia</h4>
+        <h6 class="mb-3">Id: </h6>
+        <div class="div-noticias d-flex">
+          <div class="bg-dark noticias-imagen">
+Img
+          </div>
+          <div class="bg-danger noticias-enunciado">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias amet assumenda, cupiditate, dolore perferendis porro provident quas ratione similique sit tempore temporibus? Animi, aperiam debitis ipsam minima nemo quaerat!
+          </div>
+
+        </div>
+
       </div>
-      <div class="news-container">
-        <h4>Salud 🏥</h4>
-        <p>Estudiante de medicina hace movilidad saliente a Corea. Emelyn Sofia Becerra Rodríguez es estudiante de IX semestre del programa de Medicina de la Facultad de Ciencias de la Salud. ¡Hizo historia al representar a la UCEVA en un evento internacional en Corea! Es la primera estudiante de la facultad en realizar movilidad internacional y presencial en este país.</p>
-      </div>
-      <div class="news-container">
-        <h4>Salud Pública 🚑</h4>
-        <p>Medición de ruido estudiantes de ingeniería ambiental. En el marco del Día de la Movilidad Sostenible, los estudiantes de IX semestre del programa de Ingeniería Ambiental llevaron a cabo una medición del ruido ambiental en el campus universitario. Los resultados de estas mediciones se convertirán en el mapa de ruido institucional.</p>
-      </div>
-      <div class="news-container">
-        <h4>Administración de Empresas 📈</h4>
-        <p>Seminario sobre liderazgo y toma de decisiones el próximo mes.</p>
-      </div>
-      <div class="news-container">
-        <h4>Derecho ⚖️</h4>
-        <p>El Departamento de Derecho organiza un ciclo de conferencias sobre derechos humanos. La Facultad de Derecho invita a toda la comunidad universitaria a participar en el ciclo de conferencias 'Retos actuales de los derechos humanos'.</p>
-      </div>
-      <div class="news-container">
-        <h4>Administración 📊</h4>
-        <p>Convocatoria abierta para el programa de mentorías empresariales. El programa de Administración invita a sus estudiantes a participar en el programa de mentorías.</p>
-      </div>
-      <div class="news-container">
-        <h4>Deporte 🏅</h4>
-        <p>Campeonato interuniversitario de fútbol sala se celebrará el próximo mes. Los estudiantes de la Facultad de Deportes están organizando un torneo de fútbol sala.</p>
-      </div>
-      <div class="news-container">
-        <h4>Inglés 🇬🇧</h4>
-        <p>El Departamento de Lenguas Extranjeras lanza el programa "Conversa en inglés". Este nuevo programa busca mejorar las habilidades de conversación de los estudiantes mediante sesiones prácticas.</p>
-      </div>
+
     </div>
   </div>
 
