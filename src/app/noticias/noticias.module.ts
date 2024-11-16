@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { NoticiasRoutingModule } from './noticias-routing.module'; //se importa el archivo routing
 import {TemplateComponent} from './template/template.component'; //importa el componente
-import {provideHttpClient} from '@angular/common/http'; // extra para la ruta
+import {provideHttpClient} from '@angular/common/http';
+import { CrearNoticiaComponent } from './crear-noticia/crear-noticia.component';
 
 
 @NgModule({
   declarations: [
-    TemplateComponent
+    TemplateComponent,
+    CrearNoticiaComponent
   ],
   imports: [
     CommonModule,
