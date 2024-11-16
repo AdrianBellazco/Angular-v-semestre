@@ -30,6 +30,7 @@ export class TemplateComponent {
     });
     if (formValues) {
       Swal.fire({
+        confirmButtonColor: '#4CAF50',
         title: "Quieres jugardar los cambios?",
         showDenyButton: true,
         showCancelButton: true,
