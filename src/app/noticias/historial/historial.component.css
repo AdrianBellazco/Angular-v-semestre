@@ -1,0 +1,16 @@
+.noticias-imagen{
+  width: 70%;
+}
+
+noticias-imagen{
+  height: 100%;
+}
+
+.favoritos{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bts-favoritos{
+  margin-right: 10px;
+}
