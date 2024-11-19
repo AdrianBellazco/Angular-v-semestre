@@ -1,0 +1,10 @@
+{
+  "http://localhost:8084/noticias/mostrar_noticia": {
+    "target": "http://localhost:8084",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^http://localhost:8084/noticias/mostrar_noticia": ""
+    }
+  }
+}

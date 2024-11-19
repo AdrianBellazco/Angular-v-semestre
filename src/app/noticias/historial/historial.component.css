@@ -14,3 +14,19 @@ noticias-imagen{
 .bts-favoritos{
   margin-right: 10px;
 }
+
+
+
+.adricolor{
+  color: #555555;
+
+}
+
+.titulo_noticia{
+  text-align: justify;
+  font-weight: bold;
+}
+
+.noticias-enunciado{
+  text-align: justify;
+}

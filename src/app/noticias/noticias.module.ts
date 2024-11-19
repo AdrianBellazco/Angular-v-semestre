@@ -9,6 +9,7 @@ import { OpcionesComponent } from './opciones/opciones.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { HistorialComponent } from './historial/historial.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { NoticeTemplateComponent } from './notice-template/notice-template.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
     OpcionesComponent,
     InicioComponent,
     HistorialComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    NoticeTemplateComponent
   ],
   imports: [
     CommonModule,

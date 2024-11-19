@@ -1,16 +1,17 @@
 <h2 class="mb-5">Historial de noticias publicadas</h2>
 
-<div class="mb-5 favoritos bg-body">
+<div class="mb-5 favoritos bg-body " *ngFor="let noticias of noticias">
   <div class="news-section">
     <div class="news-container container-size " >
-      <h4>Titulo de la noticia</h4>
-      <h6 class="mb-3">Id: </h6>
+      <h4 class="titulo_noticia">{{ noticias.titulo }}</h4>
+      <h6 class="mb-3 adricolor">Id: {{ noticias.id }}</h6>
+      <h6 class="adricolor">Borrada: {{ noticias.eliminada }}</h6>
       <div class="div-noticias d-flex">
-        <div class="bg-dark noticias-imagen">
-          Img
+        <div class=" noticias-imagen">
+          {{ noticias.imagen }}
         </div>
-        <div class="bg-danger noticias-enunciado ">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, alias amet assumenda, cupiditate, dolore perferendis porro provident quas ratione similique sit tempore temporibus? Animi, aperiam debitis ipsam minima nemo quaerat!
+        <div class=" noticias-enunciado ">
+          {{ noticias.texto }}
         </div>
       </div>
       <div class="noticias-opciones mt-2">

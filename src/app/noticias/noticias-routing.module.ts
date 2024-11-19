@@ -6,6 +6,7 @@ import {InicioComponent} from './inicio/inicio.component';
 import {OpcionesComponent} from './opciones/opciones.component';
 import {HistorialComponent} from './historial/historial.component';
 import {FavoritosComponent} from './favoritos/favoritos.component';
+import {NoticeTemplateComponent} from './notice-template/notice-template.component';
 
 const routes: Routes = [
   {
