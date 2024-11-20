@@ -8,11 +8,17 @@ import {Noticias} from '../models/noticias';
 })
 export class NoticiaService {
   private apiUrl = '/noticias';
+  private apiUrl2 = '/noticia';
 
   constructor(private http: HttpClient) {}
 
+  //listar noticias
   getNoticias(): Observable<Noticias[]> {
     return this.http.get<Noticias[]>(`${this.apiUrl}/mostrar_noticia`);
+  }
+  //listar historial
+  getHistorial(): Observable<Noticias[]> {
+    return this.http.get<Noticias[]>(`${this.apiUrl2}/historial`);
   }
 
   //crear noticia

@@ -15,7 +15,7 @@ export class HistorialComponent {
   constructor (private noticiaService: NoticiaService) {}
 
   ngOnInit(): void {
-    this.noticiaService.getNoticias().subscribe(
+    this.noticiaService.getHistorial().subscribe(
       data => {
         console.log(data);  // Verifica si los datos se están recibiendo correctamente
         this.noticias = data;
