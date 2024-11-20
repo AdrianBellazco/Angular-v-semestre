@@ -1,11 +1,12 @@
 <div class="container">
-  <form>
+  <form #notiiaForm = "ngForm">
 
-  <input  class="form-control form-control-lg" type="text" placeholder="Titulo de la noticia" aria-label=".form-control-lg example">
+  <input    class="form-control form-control-lg" for="titulo" type="text" placeholder="Titulo de la noticia"
+            [(ngModel)]="noticia.titulo" name="titulo" aria-label=".form-control-lg example" required>
 
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label"></label>
-      <textarea class="form-control"  placeholder="Escribe la noticia aqui" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea [(ngModel)]="noticia.texto"  name="texto" class="form-control"  placeholder="Escribe la noticia aqui" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 
     <div class="mb-3">

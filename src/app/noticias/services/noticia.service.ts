@@ -18,7 +18,7 @@ export class NoticiaService {
   //crear noticia
   createNoticia(noticia: Noticias): Observable<Noticias> {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.put<Noticias>(`${this.apiUrl}/crear_noticia`, noticia,{ headers});
+    return this.http.post<Noticias>(`${this.apiUrl}/crear_noticia`, noticia,{ headers});
   }
 
   //eliminar noticia

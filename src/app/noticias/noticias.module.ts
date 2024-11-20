@@ -10,6 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HistorialComponent } from './historial/historial.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { NoticeTemplateComponent } from './notice-template/notice-template.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,10 +23,12 @@ import { NoticeTemplateComponent } from './notice-template/notice-template.compo
     FavoritosComponent,
     NoticeTemplateComponent
   ],
-  imports: [
-    CommonModule,
-    NoticiasRoutingModule //se agrega el archivo routing
-  ],
+    imports: [
+        CommonModule,
+        NoticiasRoutingModule,
+        FormsModule,
+
+    ],
   providers: [provideHttpClient() ]
 })
 export class NoticiasModule { }
