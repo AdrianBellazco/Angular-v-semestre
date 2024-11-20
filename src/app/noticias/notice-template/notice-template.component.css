@@ -52,7 +52,7 @@ body {
 }
 
 .container-size{
-  height: 500px;
+
 }
 
 .news-container {
@@ -78,10 +78,16 @@ body {
   width: 20%;
 }
 
+.adricolor_1{
+  color: #373737;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 .adricolor{
   color: #555555;
-
+  font-size: 15px;
 }
 
 .titulo_noticia{

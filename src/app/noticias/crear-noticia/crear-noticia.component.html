@@ -14,27 +14,33 @@
       <input class="form-control"  type="file" id="formFile">
     </div>
 
-    Categoria
+    CategoriaCategoria
     <div class="form-check form-switch mt-3">
-      <input class="form-check-input" type="checkbox" role="switch" id="Ingenieria">
+      <input class="form-check-input" type="checkbox" role="switch" id="Ingenieria"
+             (change)="seleccionar('Ingenieria', $event)">
       <label class="form-check-label" for="Ingenieria">Ingenieria</label>
     </div>
     <div class="form-check form-switch mt-3">
-      <input class="form-check-input" type="checkbox" role="switch" id="Salud">
+      <input class="form-check-input" type="checkbox" role="switch" id="Salud"
+             (change)="seleccionar('Salud', $event)">
       <label class="form-check-label" for="Salud">Salud</label>
     </div>
     <div class="form-check form-switch mt-3">
-      <input class="form-check-input" type="checkbox" role="switch" id="Derecho">
+      <input class="form-check-input" type="checkbox" role="switch" id="Derecho"
+             (change)="seleccionar('Derecho', $event)">
       <label class="form-check-label" for="Derecho">Derecho</label>
     </div>
     <div class="form-check form-switch mt-3">
-      <input class="form-check-input" type="checkbox" role="switch" id="Administrativos">
+      <input class="form-check-input" type="checkbox" role="switch" id="Administrativos"
+             (change)="seleccionar('Administrativos', $event)">
       <label class="form-check-label" for="Administrativos">Administrativo</label>
     </div>
     <div class="form-check form-switch mt-3">
-      <input class="form-check-input" type="checkbox" role="switch" id="Ingles">
+      <input class="form-check-input" type="checkbox" role="switch" id="Ingles"
+             (change)="seleccionar('Ingles', $event)">
       <label class="form-check-label" for="Ingles">Ingles</label>
     </div>
+
 
     <a type="submit" class="btn adri_color mt-5" (click)="subir()" >Subir noticia</a>
 

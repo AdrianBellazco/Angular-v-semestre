@@ -31,6 +31,19 @@ export class CrearNoticiaComponent {
 
   constructor (private noticiaService: NoticiaService) {}
 
+  seleccionar(category: string, event: any): void {
+    const isChecked = event.target.checked; // Saber si el checkbox está marcado o desmarcado
+    if (isChecked) {
+      // Agregar la categoría al string con una barra de separación
+      if (!this.noticia.programa.includes(category)) {
+        this.noticia.programa += `${category}  `;
+      }
+    } else {
+      // Eliminar la categoría del string si el checkbox se desmarca
+      this.noticia.programa = this.noticia.programa.replace(`${category}  `, '');
+    }
+  }
+
   subir(){
     Swal.fire({
       title: "Confirmar cambios",
@@ -42,6 +55,7 @@ export class CrearNoticiaComponent {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         this.noticiaService.createNoticia(this.noticia).subscribe(() => {
+
           Swal.fire({
             position: "top-end",
             icon: "success",
@@ -56,5 +70,7 @@ export class CrearNoticiaComponent {
       }
     });
   }
+
+
 
 }

@@ -6,5 +6,13 @@
     "pathRewrite": {
       "^/noticias": "/noticias"
     }
-  }
+  },
+  "/noticia": {
+    "target": "http://localhost:8084",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/noticia": "/noticia"
+    }
+  },
 }

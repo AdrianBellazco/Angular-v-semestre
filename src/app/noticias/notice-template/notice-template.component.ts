@@ -33,7 +33,7 @@ export class NoticeTemplateComponent {
 
   async editar(noticias: Noticias): Promise<void> {
     const {value: formValues} = await Swal.fire({
-      title: "editar noticia",
+      title: "Editar noticia",
       html: `
     <input id="id" class="swal2-input" placeholder="Id" disabled value ="${noticias.id}">
     <input id="titulo" class="swal2-input" placeholder="Titulo de noticia"  value ="${noticias.titulo}">
@@ -65,6 +65,7 @@ export class NoticeTemplateComponent {
           // Usa formValues directamente porque ahora es un objeto con las propiedades correctas
           noticias.titulo = formValues.titulo;
           noticias.texto = formValues.texto;
+          noticias.programa = formValues.programa;
           this.noticiaService.updateNoticia(noticias).subscribe(() => {
             Swal.fire("Guardados!", "", "success");
           });
@@ -99,5 +100,8 @@ export class NoticeTemplateComponent {
   private cargarNoticias(){
 this.noticiaService.getNoticias().subscribe(data => this.noticias = data);
   }
+
+
+
 
 }
