@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
+import {Noticias} from '../models/noticias';
+import {NoticiaService} from '../services/noticia.service';
 
 @Component({
   selector: 'app-favoritos',
@@ -7,6 +9,64 @@ import Swal from 'sweetalert2';
   styleUrl: './favoritos.component.css'
 })
 export class FavoritosComponent {
+
+  noticias: Noticias[] = [];
+
+  constructor (private noticiaService: NoticiaService) {}
+
+  ngOnInit(): void {
+    this.noticiaService.getFavoritos().subscribe(
+      data => {
+        console.log(data);  // Verifica si los datos se están recibiendo correctamente
+        this.noticias = data;
+      },
+      error => {
+        console.error('Error al cargar las noticias:', error);
+      }
+    );
+  }
+
+  favorita(noticia: Noticias): void {
+    // Verificamos si 'favorita' existe en la noticia
+    if (noticia) {
+      // Cambiar el valor de 'favorita' (alternarlo entre true y false)
+      noticia.favorita = !noticia.favorita;
+
+      // Si se cambia a true, se hace un mensaje de agregado, si es false, de eliminado
+      const mensaje = noticia.favorita ? 'Agregada a favoritas' : 'Eliminada de favoritas';
+
+
+      // Hacer la llamada al servicio solo si es necesario
+      this.noticiaService.favorita(noticia).subscribe(
+        () => {
+          // Después de la respuesta del servidor, mostramos un Toast
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          this.cargarNoticias();
+          Toast.fire({
+
+            icon: "success",
+            title: mensaje
+          });
+        },
+        (error) => {
+          // Si ocurre un error con el servicio, podemos revertir el cambio
+          noticia.favorita = !noticia.favorita;  // Revertir el cambio
+          alert('Hubo un error al intentar actualizar el estado de favorito');
+        }
+      );
+    }
+  }
+
 
 
   async editar() {
@@ -84,5 +144,10 @@ export class FavoritosComponent {
       }
     });
   }
+
+  private cargarNoticias(){
+    this.noticiaService.getFavoritos().subscribe(data => this.noticias = data);
+  }
+
 
 }

@@ -36,8 +36,16 @@ export class NoticiaService {
   updateNoticia(noticia: Noticias): Observable<Noticias> {
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
     return this.http.put<Noticias>(`${this.apiUrl}/modificar_noticia/${noticia.id}`, noticia,{ headers});
-
   }
 
+  //guardar noticia como favorita
+  favorita(noticia: Noticias): Observable<Noticias> {
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
+    return this.http.put<Noticias>(`${this.apiUrl2}/noticias_favorita/${noticia.id}`, noticia,{ headers});
+  }
 
+  //enlistar los favoritos
+  getFavoritos(): Observable<Noticias[]> {
+    return this.http.get<Noticias[]>(`${this.apiUrl2}/mostrar_guardados`);
+  }
 }

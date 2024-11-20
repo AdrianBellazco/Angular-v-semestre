@@ -27,7 +27,46 @@ export class NoticeTemplateComponent {
     );
   }
 
+  favorita(noticia: Noticias): void {
+    // Verificamos si 'favorita' existe en la noticia
+    if (noticia) {
+      // Cambiar el valor de 'favorita' (alternarlo entre true y false)
+      noticia.favorita = !noticia.favorita;
 
+      // Si se cambia a true, se hace un mensaje de agregado, si es false, de eliminado
+      const mensaje = noticia.favorita ? 'Agregada a favoritas' : 'Eliminada de favoritas';
+
+
+      // Hacer la llamada al servicio solo si es necesario
+      this.noticiaService.favorita(noticia).subscribe(
+        () => {
+          this.cargarNoticias();
+          // Después de la respuesta del servidor, mostramos un Toast
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+
+          Toast.fire({
+            icon: "success",
+            title: mensaje
+          });
+        },
+        (error) => {
+          // Si ocurre un error con el servicio, podemos revertir el cambio
+          noticia.favorita = !noticia.favorita;  // Revertir el cambio
+          alert('Hubo un error al intentar actualizar el estado de favorito');
+        }
+      );
+    }
+  }
 
 
 
