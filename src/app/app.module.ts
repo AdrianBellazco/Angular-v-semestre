@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import {provideHttpClient} from '@angular/common/http';
 import {NoticiaService} from './noticias/services/noticia.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
@@ -16,7 +17,8 @@ import {NoticiaService} from './noticias/services/noticia.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   exports: [RouterModule],
   providers: [provideHttpClient(), NoticiaService],

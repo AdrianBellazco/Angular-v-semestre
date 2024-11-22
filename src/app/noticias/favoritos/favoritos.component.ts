@@ -10,6 +10,8 @@ import {NoticiaService} from '../services/noticia.service';
 })
 export class FavoritosComponent {
 
+  public p!: number;
+
   noticias: Noticias[] = [];
 
   constructor (private noticiaService: NoticiaService) {}

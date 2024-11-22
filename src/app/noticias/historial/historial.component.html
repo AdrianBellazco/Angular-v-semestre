@@ -1,6 +1,8 @@
 <h2 class="mb-5">Historial de noticias publicadas</h2>
 
-<div class="mb-5 favoritos bg-body " *ngFor="let noticias of noticias">
+
+<div class="contenido">
+<div class="mb-5 favoritos bg-body " *ngFor="let noticias of noticias  | paginate: { itemsPerPage: 5, currentPage: p }">
   <div class="news-section">
     <div class="news-container container-size " >
       <h4 class="titulo_noticia">{{ noticias.titulo }}</h4>
@@ -41,12 +43,13 @@
           </svg>
         </button>
       -->
-
-
       </div>
-
     </div>
-
   </div>
+
 </div>
+</div>
+<pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente">
+
+</pagination-controls>
 

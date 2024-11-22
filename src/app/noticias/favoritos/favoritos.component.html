@@ -2,7 +2,7 @@
 
 <div class="b-f">
 
-<div class="mb-5 favoritos bg-body" *ngFor="let noticias of noticias">
+<div class="mb-5 favoritos bg-body" *ngFor="let noticias of noticias | paginate: { itemsPerPage: 5, currentPage: p }">
   <div class="news-section">
     <div class="news-container container-size">
       <h4>{{ noticias.titulo }}</h4>
@@ -49,5 +49,7 @@
 </div>
 </div>
 
+<pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente">
 
+</pagination-controls>
 

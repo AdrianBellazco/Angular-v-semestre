@@ -9,6 +9,7 @@ import {NoticiaService} from '../services/noticia.service';
 })
 export class HistorialComponent {
 
+  public p!: number;
 
   noticias: Noticias[] = [];
 

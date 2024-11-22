@@ -11,6 +11,7 @@ import { HistorialComponent } from './historial/historial.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { NoticeTemplateComponent } from './notice-template/notice-template.component';
 import {FormsModule} from "@angular/forms";
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {FormsModule} from "@angular/forms";
     NoticeTemplateComponent
   ],
     imports: [
+      NgxPaginationModule,
         CommonModule,
         NoticiasRoutingModule,
         FormsModule,

@@ -26,6 +26,11 @@ noticias-imagen{
 
 }
 
+.contenido{
+  min-height: 81vh;
+}
+
+
 .titulo_noticia{
   text-align: justify;
   font-weight: bold;
