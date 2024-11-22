@@ -17,7 +17,6 @@ const routes: Routes = [
       { path: 'crearNoticia', component: CrearNoticiaComponent,},
       { path: 'historial', component: HistorialComponent,},
       { path: 'favoritos', component: FavoritosComponent,},
-
     ],
   },
 

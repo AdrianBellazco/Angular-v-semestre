@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Averta Demo PE", sans-serif;
 }
 
 body {
@@ -13,8 +13,9 @@ body {
 }
 
 .noticias-enunciado{
+  max-width: 500px;
+  word-wrap: break-word;
 
-  width: 30%;
 }
 
 .icones-enunciado{

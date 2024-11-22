@@ -1,6 +1,6 @@
 {
   "/noticias": {
-    "target": "http://localhost:8084",
+    "target": "http://18.227.79.218:8080",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
@@ -8,11 +8,16 @@
     }
   },
   "/noticia": {
-    "target": "http://localhost:8084",
+    "target": "http://18.227.79.218:8080",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
       "^/noticia": "/noticia"
     }
-  },
+  }
+
 }
+
+
+
+

@@ -1,3 +1,6 @@
+*{
+  font-family: "Averta Demo PE", sans-serif;
+}
 .noticias-imagen{
   width: 70%;
 }
@@ -9,6 +12,11 @@ noticias-imagen{
 .favoritos{
   padding: 10px;
   border-radius: 10px;
+  max-height: 300px;
+}
+
+.b-f{
+  min-height: 95vh;
 }
 
 .bts-favoritos{

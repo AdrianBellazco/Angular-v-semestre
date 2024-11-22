@@ -1,3 +1,7 @@
+*{
+  font-family: "Averta Demo PE", sans-serif;
+
+}
 .noticias-imagen{
   width: 70%;
 }
@@ -28,5 +32,14 @@ noticias-imagen{
 }
 
 .noticias-enunciado{
+  max-width: 500px;
   text-align: justify;
+  word-wrap: break-word;
+}
+
+.adricolor_1{
+  color: #373737;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
 }

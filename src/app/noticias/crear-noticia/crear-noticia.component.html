@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container b-c">
   <form #notiiaForm = "ngForm">
 
   <input    class="form-control form-control-lg" for="titulo" type="text" placeholder="Titulo de la noticia"
@@ -6,7 +6,12 @@
 
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label"></label>
-      <textarea [(ngModel)]="noticia.texto"  name="texto" class="form-control"  placeholder="Escribe la noticia aqui" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea [(ngModel)]="noticia.texto" maxlength="255" name="texto" class="form-control areacontrol"  placeholder="Escribe la noticia aqui" id="exampleFormControlTextarea1" rows="3">
+
+      </textarea>
+      <small [class.text-danger]="(noticia.texto?.length || 0) === 255">
+        {{ noticia.texto?.length || 0 }}/255 caracteres
+      </small>
     </div>
 
     <div class="mb-3">
