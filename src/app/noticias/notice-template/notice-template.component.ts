@@ -30,18 +30,15 @@ export class NoticeTemplateComponent {
   favorita(noticia: Noticias): void {
     // Verificamos si 'favorita' existe en la noticia
     if (noticia) {
-      // Cambiar el valor de 'favorita' (alternarlo entre true y false)
       noticia.favorita = !noticia.favorita;
 
       // Si se cambia a true, se hace un mensaje de agregado, si es false, de eliminado
       const mensaje = noticia.favorita ? 'Agregada a favoritas' : 'Eliminada de favoritas';
 
 
-      // Hacer la llamada al servicio solo si es necesario
       this.noticiaService.favorita(noticia).subscribe(
         () => {
           this.cargarNoticias();
-          // Después de la respuesta del servidor, mostramos un Toast
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -60,7 +57,6 @@ export class NoticeTemplateComponent {
           });
         },
         (error) => {
-          // Si ocurre un error con el servicio, podemos revertir el cambio
           noticia.favorita = !noticia.favorita;  // Revertir el cambio
           alert('Hubo un error al intentar actualizar el estado de favorito');
         }
@@ -101,7 +97,6 @@ export class NoticeTemplateComponent {
         denyButtonText: `No guardar`
       }).then((result) => {
         if (result.isConfirmed) {
-          // Usa formValues directamente porque ahora es un objeto con las propiedades correctas
           noticias.titulo = formValues.titulo;
           noticias.texto = formValues.texto;
           noticias.programa = formValues.programa;
